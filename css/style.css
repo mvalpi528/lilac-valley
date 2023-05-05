@@ -1,0 +1,247 @@
+/* ==========BASIC UNIVERSAL STYLING & CLEAN UP============= */
+/* some basic css resetting */
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Amatic SC', cursive;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+html {
+  scroll-behavior: smooth;
+}
+section{
+  margin-bottom: 100px;
+}
+h2{
+  font-size: 5rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* ==========HEADER============= */
+
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  border-bottom: 1px solid grey;
+  
+}
+
+header a {
+  height: 100%;
+}
+
+/* ==========LOGO============= */
+
+.logo {
+  height: 100%;
+  width: auto;
+}
+
+/* ==========NAVIGATION============= */
+
+nav {
+  width: 50%;
+  min-width: 500px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+/* Styling the nav bar text */
+nav li a{
+  
+  font-size: 26px;
+  font-weight: 400;
+  transition: 1s ease;
+}
+
+nav li a:hover{
+  color: blue;
+}
+
+
+/* ==========MAIN BODY CONTENT============= */
+
+/* ==========SECTION 1 STYLING============= */
+#hero {
+  height: 100vh;
+  
+}
+
+.hero-image {
+  height: 100%;
+}
+
+.hero-container {
+  /* Gathering the child elements */
+  position: relative;
+}
+
+.hero-text {
+  /* Parent of this element must be position relative */
+  /* Position absolute takes it out of the normal content flow */
+  position: absolute;
+  color: white;
+  top: 20%;
+  left: 20%;
+  font-size: 10rem;
+
+}
+/* ==========SECTION 2 STYLING============= */
+#about-us {
+  border: solid 5px rgb(0, 128, 36);
+  margin-top: 250px;
+  height: 150vh;
+}
+
+#about-us-grid-container {
+  height: 50%;
+  margin: 0 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  border: darkblue dashed 3px;
+}
+
+.about-us-grid-item {
+  border: black 1px solid;
+  
+}
+
+/* ==========SECTION 3 STYLING============= */
+#gallery {
+  height: 100vh;
+}
+#gallery-grid-container {
+  display: grid;
+  height: 90vh;
+  margin: 10px 50px;
+  border: solid black 2px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+#gallery-item-1 {
+  grid-column: span 1;
+  grid-row: span 2;
+  text-align: center;
+  margin: 5px;
+  border: dashed blue 5px;
+  border-radius: 10px;
+  background-color: aqua;
+}
+
+#gallery-item-1 h3 {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: blue;
+}
+
+#gallery-item-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#gallery-item-2 {
+  grid-column: span 1;
+  grid-row: span 3;
+  text-align: left;
+  padding: 5px 15px;
+  margin: 5px;
+  border: dashed red 5px;
+  border-radius: 10px;
+  background-color: pink;
+}
+
+#gallery-item-2 h3 {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: red;
+}
+
+#gallery-item-2 p {
+  color: white;
+}
+
+#gallery-item-3 {
+  grid-column: span 1;
+  grid-row: span 1;
+  text-align: center;
+  margin: 5px;
+  border: dashed green 5px;
+  border-radius: 10px;
+}
+#gallery-item-4 {
+  grid-column: span 1;
+  grid-row: span 3;
+  text-align: center;
+  margin: 5px;
+  border: dashed purple 5px;
+  border-radius: 10px;
+}
+#gallery-item-5 {
+  grid-column: span 1;
+  grid-row: span 1;
+  text-align: center;
+  margin: 5px;
+  border: dashed purple 5px;
+  border-radius: 10px;
+  display: none;
+}
+#gallery-item-6 {
+  grid-column: span 1;
+  grid-row: span 3;
+  text-align: center;
+  margin: 5px;
+  border: dashed purple 5px;
+  border-radius: 10px;
+  display: none;
+}
+/* ==========SECTION 4 STYLING============= */
+#bookings {
+  height: 100vh;
+}
+/* ==========FOOTER STYLIING============= */
+
+/* ==========RESPONSIVE DESIGN============= */
+
+/* ===== 5K RETINA MAC LABS: Media queries for Curtin Uni mac lab testing only ===== */
+@media only screen and (max-width: 5120px) {
+}
+
+/* ===== DESKTOP HD: Media queries for most HD desktops ===== */
+@media only screen and (max-width: 1920px) {
+}
+
+/* ===== SMALL DESKTOP: Media queries for laptop/small desktop ===== */
+@media only screen and (max-width: 1366px) {
+}
+
+/* ===== TABLET: Media queries for verticle and horizontal ===== */
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+/* ===== MOBILE: Media queries for small mobile resolution. ===== */
+@media only screen and (max-width: 640px) {
+}
+
+@media only screen and (max-width: 360px) {
+}
