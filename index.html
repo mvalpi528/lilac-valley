@@ -42,17 +42,9 @@
       <!--SECTION 1-->
       <section id="hero">
 
-        <div class="hero-container">
-          <img
-            class="hero-image"
-            src="images/hero.jpeg"
-            alt=""
-          />
           <!-- It is important that the text do you want a layer over the image must be below the image in the HTML file -->
           <h1 class="hero-text">Lilac Valley Farm Stay</h1>
           
-        </div>
-
       </section>
       <!--SECTION 2-->
       <section id="about-us">
@@ -95,12 +87,64 @@
       </section>
       <!--SECTION 4-->
       <section id="bookings">
-        <h2>bookings</h2>
-        <label for="check-in">Check in:</label>
-        <input id="check-in" type="date" />
-        <br />
-        <label for="check-out">Check out:</label>
-        <input id="check-out" type="date" />
+
+        
+
+        <div id="bookings-form-container">
+          <h2>Book Now</h2>
+       
+          <form action="" method="post">
+            <input type="text" id="name" name="name" placeholder="name" required>
+            <br>
+    
+            <input type="email" id="email" name="email" placeholder="email" required>
+            <br>
+        
+            <input type="tel" id="phone" name="phone" placeholder="phone" required>
+            <br>
+          
+            <label for="checkin">Check-in Date:</label>
+            <br>
+            <input type="date" id="checkin" name="checkin" required>
+            <br>
+          
+            <label for="checkout">Check-out Date:</label>
+            <br>
+            <input type="date" id="checkout" name="checkout" required>
+            <br>
+          
+            <label for="adults">Number of Adults:</label>
+            <br>
+            <input type="number" id="adults" name="adults" min="1" max="10" required>
+            <br>
+          
+            <label for="children">Number of Children:</label>
+            <br>
+            <input type="number" id="children" name="children" min="0" max="10" required>
+            <br>
+          
+            <label for="room">Room Type:</label>
+            <br>
+            <select id="room" name="room" required>
+              <option value="standard">Standard Room</option>
+              <option value="deluxe">Deluxe Room</option>
+              <option value="suite">Suite</option>
+            </select>
+            <br>
+          
+            <label for="special">Special Requests or Additional Information:</label>
+            <br>
+            <textarea id="special" name="special"></textarea>
+            <br>
+          
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+        <div id="bookings-image-container">
+        </div>
+          
+        
+        
       </section>
       <!--SECTION 5-->
       <section id="contact"></section>
