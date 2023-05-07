@@ -80,27 +80,22 @@ nav li a:hover{
 /* ==========SECTION 1 STYLING============= */
 #hero {
   height: 100vh;
-  
-}
-
-.hero-image {
-  height: 100%;
-}
-
-.hero-container {
-  /* Gathering the child elements */
   position: relative;
+  border: solid 1px pink;
+  background-image: url('../images/hero.jpeg');
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-text {
   /* Parent of this element must be position relative */
   /* Position absolute takes it out of the normal content flow */
   position: absolute;
+  border: 1px solid white;
   color: white;
-  top: 20%;
-  left: 20%;
-  font-size: 10rem;
-
+  top: 0px;
+  left: 0%;
+  font-size: 10vw;
 }
 /* ==========SECTION 2 STYLING============= */
 #about-us {
@@ -215,7 +210,31 @@ nav li a:hover{
 /* ==========SECTION 4 STYLING============= */
 #bookings {
   height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
 }
+
+#bookings-form-container{
+  border: 1px solid red;
+  padding: 20px 80px;
+}
+
+#bookings-image-container{
+  /* https://unsplash.com/photos/GHOiyov2TSQ */
+  background-image: url('../images/horses.jpg');
+  background-size: contain;
+  border: 1px solid blue;
+}
+
+input[type="text"], input[type="email"], input[type="tel"]{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+}
+
+
+
 /* ==========FOOTER STYLIING============= */
 
 /* ==========RESPONSIVE DESIGN============= */
@@ -245,3 +264,9 @@ nav li a:hover{
 
 @media only screen and (max-width: 360px) {
 }
+
+/* REFERENCES */
+
+/* sheep.jpg -  https://unsplash.com/photos/GHOiyov2TSQ */
+/* cows.jpg - https://unsplash.com/photos/UdhpcfImQ9Y */
+/* horses.jpg - https://unsplash.com/photos/38_XHFO6ycI */
