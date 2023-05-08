@@ -1,21 +1,24 @@
 /* ==========BASIC UNIVERSAL STYLING & CLEAN UP============= */
 /* some basic css resetting */
+html {
+  scroll-behavior: auto;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
 }
 a {
   text-decoration: none;
   color: black;
 }
-html {
-  scroll-behavior: smooth;
+
+section {
+  height: auto;
+  border: pink 5px dashed;
 }
-section{
-  margin-bottom: 100px;
-}
-h2{
+h2 {
   font-size: 5rem;
   font-weight: 300;
   text-align: center;
@@ -24,7 +27,7 @@ h2{
 /* ==========HEADER============= */
 
 header {
-  height: 100px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,10 +35,11 @@ header {
   position: sticky;
   top: 0;
   left: 0;
+  /* remember that a value for the position property must 
+  be specified for a z-index to work */
   z-index: 10;
   background-color: #ffffff;
   border-bottom: 1px solid grey;
-  
 }
 
 header a {
@@ -53,7 +57,7 @@ header a {
 
 nav {
   width: 50%;
-  min-width: 500px;
+  min-width: 600px;
 }
 
 nav ul {
@@ -63,26 +67,28 @@ nav ul {
 }
 
 /* Styling the nav bar text */
-nav li a{
-  
+nav li a {
   font-size: 26px;
   font-weight: 400;
   transition: 1s ease;
 }
 
-nav li a:hover{
+nav li a:hover {
   color: blue;
 }
-
 
 /* ==========MAIN BODY CONTENT============= */
 
 /* ==========SECTION 1 STYLING============= */
+
 #hero {
+  /* Sets the height of the section to the entire height of the viewport */
   height: 100vh;
+  /* An element with position: absolute must have a parent element set
+   to position: relative to contain it, otherwise it will be positioned in relation
+   to the html element. This is the parent container for the hero text */
   position: relative;
-  border: solid 1px pink;
-  background-image: url('../images/hero.jpeg');
+  background-image: url("../images/hero.jpeg");
   background-position: center;
   background-size: cover;
 }
@@ -91,45 +97,96 @@ nav li a:hover{
   /* Parent of this element must be position relative */
   /* Position absolute takes it out of the normal content flow */
   position: absolute;
-  border: 1px solid white;
   color: white;
-  top: 0px;
-  left: 0%;
-  font-size: 10vw;
+  top: 50%;
+  left: 10%;
+  font-size: 8rem;
 }
+
 /* ==========SECTION 2 STYLING============= */
 #about-us {
-  border: solid 5px rgb(0, 128, 36);
-  margin-top: 250px;
-  height: 150vh;
+  background-color: rgb(255, 252, 249);
+}
+
+#about-us h3 {
+  font-family: "Amatic SC", cursive;
+  padding: 0;
+  margin: 0;
 }
 
 #about-us-grid-container {
-  height: 50%;
-  margin: 0 100px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  border: darkblue dashed 3px;
+  grid-template-rows: 400px 400px;
+  gap: 50px;
+  /* border: darkblue dashed 3px; */
 }
 
 .about-us-grid-item {
-  border: black 1px solid;
-  
+  /* border: black 1px solid; */
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+}
+
+#about-us-image-1 {
+  background-image: url("/images/horses.jpg");
+  background-position: bottom;
+  background-size: cover;
+  border-radius: 3px;
+}
+
+#about-us-image-2 {
+  background-image: url("/images/lilac-valley-logo.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 3px;
+}
+
+#meet-the-animals {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+#meet-the-animals-grid-container {
+  display: grid;
+  /* min-max stops the elements from the images from resizing to a tiny width */
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, 300px);
+  place-items: center;
+  gap: 100px;
+}
+
+.meet-the-animals-grid-item {
+  /* border: 1px black solid; */
+  height: 100%;
+  width: 100%;
+}
+
+.animal-bio-pic {
+  width: 100%;
+  border-radius: 3px;
 }
 
 /* ==========SECTION 3 STYLING============= */
+
+/* Applying styling to the entire section */
 #gallery {
-  height: 100vh;
 }
+
 #gallery-grid-container {
   display: grid;
   height: 90vh;
-  margin: 10px 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 10px;
   border: solid black 2px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
 }
+
 #gallery-item-1 {
   grid-column: span 1;
   grid-row: span 2;
@@ -215,25 +272,25 @@ nav li a:hover{
   text-align: center;
 }
 
-#bookings-form-container{
+#bookings-form-container {
   border: 1px solid red;
   padding: 20px 80px;
 }
 
-#bookings-image-container{
+#bookings-image-container {
   /* https://unsplash.com/photos/GHOiyov2TSQ */
-  background-image: url('../images/horses.jpg');
+  background-image: url("../images/horses.jpg");
   background-size: contain;
   border: 1px solid blue;
 }
 
-input[type="text"], input[type="email"], input[type="tel"]{
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
   border: none;
   outline: none;
   border-bottom: 1px solid grey;
 }
-
-
 
 /* ==========FOOTER STYLIING============= */
 
@@ -270,3 +327,4 @@ input[type="text"], input[type="email"], input[type="tel"]{
 /* sheep.jpg -  https://unsplash.com/photos/GHOiyov2TSQ */
 /* cows.jpg - https://unsplash.com/photos/UdhpcfImQ9Y */
 /* horses.jpg - https://unsplash.com/photos/38_XHFO6ycI */
+/* horse.jpg - https://unsplash.com/photos/Olt577JtPM0 */
