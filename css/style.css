@@ -1,33 +1,86 @@
 /* ==========BASIC UNIVERSAL STYLING & CLEAN UP============= */
+
+/* Importing a downloaded font */
+@font-face {
+  font-family: "Abyss";
+  /* Jumps back to index via ../ */
+  src: url("../fonts/Abyss.otf");
+}
+
+@font-face {
+  font-family: "ViaodaLibre";
+  /* Jumps back to index via ../ */
+  src: url("../fonts/ViaodaLibre-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Bebas";
+  /* Jumps back to index via ../ */
+  src: url("../fonts/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Karla";
+  /* Jumps back to index via ../ */
+  src: url("../fonts/Karla-VariableFont_wght.ttf");
+}
+
 /* some basic css resetting */
+/* Creating CSS Custom Properties */
+/* Selecting the root element of your page, which in almost all cases is the html element */
+:root {
+  --primary-color: #fffefe;
+  --secondary-color: #292226;
+  --tertiary-color: #4d697b;
+
+  --hero-font: "Amatic SC";
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Bebas";
+}
+
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Amatic SC", cursive;
+  font-family: var(--primary-font);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
-a {
+
+nav a {
   text-decoration: none;
-  color: black;
+  color: var(--secondary-color);
+  font-family: var(--secondary-font);
 }
 
 section {
   height: auto;
   padding: 10px;
-  border: pink 5px dashed;
+  /* border: pink 5px dashed; */
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--secondary-font);
+}
+
+h1 {
+  font-family: var(--hero-font);
+  color: var(--primary-color);
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 300;
   text-align: center;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 /* ==========HEADER============= */
 
@@ -79,7 +132,8 @@ nav li a {
 }
 
 nav li a:hover {
-  color: blue;
+  color: var(--tertiary-color);
+  text-decoration: underline;
 }
 
 /* ==========MAIN BODY CONTENT============= */
@@ -93,7 +147,8 @@ nav li a:hover {
    to position: relative to contain it, otherwise it will be positioned in relation
    to the html element. This is the parent container for the hero text */
   position: relative;
-  background-image: url("../images/hero.jpeg");
+  /* Make sure to get this image below 1MB - other images should be around 200kb */
+  background-image: url("../images/hero3.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -109,12 +164,8 @@ nav li a:hover {
 }
 
 /* ==========SECTION 2 STYLING============= */
-#about-us {
-  background-color: rgb(255, 252, 249);
-}
 
 #about-us h3 {
-  font-family: "Amatic SC", cursive;
   padding: 0;
   margin: 0;
 }
@@ -239,7 +290,7 @@ nav li a:hover {
 #bookings {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 
   max-width: 1000px;
   margin: 0 auto;
@@ -289,45 +340,44 @@ textarea {
 }
 
 #book-now-button {
-  color: #ffffff;
-  background-color: rgb(0, 131, 96);
+  font-family: var(--secondary-font);
+  font-size: medium;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
   border-radius: 50px;
   border: none;
   padding: 10px 0;
   transition: 0.2s ease-in-out;
   cursor: pointer;
+  font-weight: bold;
 }
 
 #book-now-button:hover {
-  background-color: rgb(148, 255, 227);
-  color: rgb(0, 131, 96);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: solid 2px var(--secondary-color);
 }
 
 /* ==========FOOTER STYLIING============= */
 
 footer {
-  background-color: black;
-  color: white;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
   height: auto;
-  border: red 5px solid;
 }
 
 .footer-space-manager {
-  border: white 1px solid;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
 .footer-container a {
-  color: white;
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 /* ==========RESPONSIVE DESIGN============= */
-
-/* ===== 5K RETINA MAC LABS: Media queries for Curtin Uni mac lab testing only ===== */
-@media only screen and (max-width: 5120px) {
-}
 
 /* ===== DESKTOP HD: Media queries for most HD desktops ===== */
 @media only screen and (max-width: 1920px) {
@@ -368,3 +418,4 @@ footer {
 /* woman-drinking-tea.jpg - https://unsplash.com/photos/DeRbzZO4bUY */
 /* fireplace.jpg - https://unsplash.com/photos/xvYNf3a6LmM */
 /* man-pats-horse - https://unsplash.com/photos/0J_dP7tm0Iw */
+/* hero3.jpg - https://www.pexels.com/photo/landscape-photography-of-green-grass-field-1227596/*/
