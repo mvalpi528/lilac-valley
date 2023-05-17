@@ -291,9 +291,9 @@ nav li a:hover {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-
   max-width: 1000px;
   margin: 0 auto;
+  border: 1px solid var(--secondary-color);
 }
 
 #bookings-form-container {
