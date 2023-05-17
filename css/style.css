@@ -188,14 +188,14 @@ nav li a:hover {
 }
 
 #about-us-image-1 {
-  background-image: url("/images/blue-mountains.jpg");
+  background-image: url("../images/blue-mountains.jpg");
   background-position: bottom;
   background-size: cover;
   border-radius: 3px;
 }
 
 #about-us-image-2 {
-  background-image: url("/images/child-feeding-chickens.jpg");
+  background-image: url("../images/child-feeding-chickens.jpg");
   background-position: center;
   background-size: cover;
   border-radius: 3px;
