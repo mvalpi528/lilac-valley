@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Setting the character encoding (which characters are mapped to a given bit sequence) -->
+    <!-- Setting the character encoding (how the browser translates binary digits into characters)-->
     <meta charset="utf-8" />
+
+    <!-- This tag specifies how the browser intially displays the content based on the user's device size at 1.0 zoom and at the width of the device that has been used to access the site -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- The text that appears in the tab -->
     <title>Lilac Valley Farm Stay</title>
 
-    <!-- Description of the author and site content -->
+    <!-- The creator of the website -->
     <meta name="author" content="Marc Valpiani" />
+
+    <!-- The brief description of the website that appears in the search engine results page -->
     <meta
       name="description"
-      content="website for Lilac Valley Farm Stay, a luxury farm stay in the blue mountains"
+      content="Lilac Valley Farm Stay is a luxury farm stay in the Blue Mountains. Relax and unwind while connecting with animals and nature a short drive from Sydney."
     />
 
     <!-- SEO (Search Engine Optimisation) keywords -->
+    <!-- Links the website to these search terms, e.g. if a user searches for 'Blue Mountains weekend getaway' the site will be more likely to be shown in that search as the keywords are contained in their search-->
     <meta
       name="keywords"
-      content="farm stay, blue mountains, Air BnB, weekend getaway"
+      content="farm stay, Blue Mountains, Air BnB, weekend getaway, farm animals, Bed and Breakfast, B&B"
     />
 
+    <!-- Links to the external CSS stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
-    <!-- this cannot be an SVG -->
-    <!-- resize this to 50px by 50px as it is unnecessary to have a large image for an icon -->
+
+    <!-- The icon that is shown in the browser tab -->
     <link rel="icon" href="lilac-valley-logo.png" />
 
+    <!-- Connecting to Google fonts to load in external fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Accessing the Amatic SC font for the hero text-->
     <link
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Accessing the Montserrat font for the body text -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Connecting to the font awesome library -->
+    <script
+      src="https://kit.fontawesome.com/d160f04d3f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <!--HEADER-->
-
-    <!--LOGO-->
-    <!--NAVIGATION-->
     <header>
-      <!-- # Links back to the top of the page -->
+      <!-- href='#' means that if the user clicks this logo they are brought back to the top of the page -->
       <a href="#"
         ><img
           src="lilac-valley-logo.png"
           class="logo"
-          alt="lilac valley farm stay logo"
+          alt="The logo for Lilac Valley farm stay"
       /></a>
+      <!-- Navigation bar with each element stored in a list -->
+      <!-- Each link takes the user to the relevant section because the hrefs each correspond to the id of that section -->
       <nav>
         <ul>
           <li><a href="#about-us">About Us</a></li>
@@ -62,69 +74,111 @@
       </nav>
     </header>
 
-    <!--MAIN CONTENT-->
-
+    <!-- The main content of the site is all located within the 'main' element -->
     <main>
-      <!--SECTION 1-->
+      <!-- The background image for this section is set in the CSS -->
       <section id="hero">
-        <!-- It is important that the text do you want a layer over the image must be below the image in the HTML file -->
         <h1 class="hero-text">Lilac Valley Farm Stay</h1>
       </section>
-      <!--SECTION 2-->
+
+      <!-- About Us section -->
       <section id="about-us">
         <h2>about us</h2>
+        <!-- The 'about us' content is split into four grid items contained within this div  -->
+        <!-- Each element has been assigned the same class name so that they can be styled as a group -->
         <div id="about-us-grid-container">
           <div class="about-us-grid-item">
             <h3>Who we are?</h3>
             <p>
-              Lilac Valley Farm Stay is a simple, rustic farm stay accommodation
-              in the hills of the Blue Mountains.
+              Located just over an hour away from Sydney, Lilac Valley Farm Stay
+              is a simple, rustic farm stay accommodation in the hills of the
+              Blue Mountains.
             </p>
-            <p>
-              After years of hard work, the property now features a beautifully
-              restored, open plan, luxury barn house, on four acres of land home
-              to sheep, chickens, ducks and one very friendly goat named Rosie.
-            </p>
-            <p>
-              There is an outdoor plunge pool just off the back verandah, and a
-              stunning cottage garden.
-            </p>
+            <p>What you'll find here -</p>
+            <ul>
+              <li>A beautifully restored, open plan luxury barn house</li>
+              <li>Extensive grounds situated on four acres of land</li>
+              <li>
+                Farm animals including sheep, chickens, ducks and one very
+                friendly goat named Rosie
+              </li>
+              <li>An outdoor plunge pool just off the back verandah</li>
+              <li>A stunning cottage garden</li>
+            </ul>
           </div>
-
+          <!-- Images are added to these grid items in CSS -->
           <div class="about-us-grid-item" id="about-us-image-1"></div>
-
           <div class="about-us-grid-item" id="about-us-image-2"></div>
           <div class="about-us-grid-item">
             <h3>The Lilac Valley experience</h3>
-            <p>Relax and unwind with the family.</p>
+            <p>
+              Relax and unwind with the family while you take in the fresh air
+              at Lilac Valley Farm Stay.
+            </p>
+            <p>
+              Situated in close proximity to breathtaking natural landscapes,
+              award winning cafes and restaurants, as well as world renowned
+              hikes and scenic lookouts.
+            </p>
+            <p>
+              Whether you're looking to hike, take in the view, spend time with
+              the animals or get cozy with your favourite book, there is
+              something for the whole family at Lilac Valley Farm Stay.
+            </p>
           </div>
         </div>
 
+        <!-- A sub-section of the 'about us' section -->
+        <!-- A grid container that holds cards for animals with matching names -->
         <div id="meet-the-animals">
           <h2>Meet the Animals</h2>
           <div id="meet-the-animals-grid-container">
             <div class="meet-the-animals-grid-item">
-              <img src="images/sheep.jpg" alt="" class="animal-bio-pic" />
+              <img
+                src="images/sheep.jpg"
+                alt="A sheep looking into the camera with multiple sheep in the background"
+                class="animal-bio-pic"
+              />
               <h3>Shauna the sheep</h3>
             </div>
             <div class="meet-the-animals-grid-item">
-              <img src="images/cows.jpg" alt="" class="animal-bio-pic" />
+              <img
+                src="images/cows.jpg"
+                alt="A cow looking into the camera with multiple cows in the background"
+                class="animal-bio-pic"
+              />
               <h3>Kelly the cow</h3>
             </div>
             <div class="meet-the-animals-grid-item">
-              <img src="images/horse.jpg" alt="" class="animal-bio-pic" />
+              <img
+                src="images/horse.jpg"
+                alt="A horse looking into the camera in front of a black background"
+                class="animal-bio-pic"
+              />
               <h3>Harry the horse</h3>
             </div>
             <div class="meet-the-animals-grid-item">
-              <img src="images/chicken.jpg" alt="" class="animal-bio-pic" />
+              <img
+                src="images/chicken.jpg"
+                alt="A single rooster walking across a patch of grass"
+                class="animal-bio-pic"
+              />
               <h3>Rodney the Rooster</h3>
             </div>
             <div class="meet-the-animals-grid-item">
-              <img src="images/piglets.jpg" alt="" class="animal-bio-pic" />
+              <img
+                src="images/piglets.jpg"
+                alt="Two piglets leading against a fence post looking over"
+                class="animal-bio-pic"
+              />
               <h3>Poppy and Paula the piglets</h3>
             </div>
             <div class="meet-the-animals-grid-item">
-              <img src="images/goat.jpg" alt="" class="animal-bio-pic" />
+              <img
+                src="images/goat.jpg"
+                alt="A goat looks at the camera with out of focus grass in the background"
+                class="animal-bio-pic"
+              />
               <h3>Rosie the goat</h3>
             </div>
           </div>
@@ -134,24 +188,44 @@
       <!--SECTION 3-->
       <section id="gallery">
         <h2>gallery</h2>
+        <!-- A grid to contain gallery images -->
+        <!-- Each gallery item has a unique id allowing them to have unique sizes -->
         <div id="gallery-grid-container">
           <div id="gallery-item-1" class="gallery-item">
-            <img src="images/cabin-sunset.jpg" alt="" />
+            <img
+              src="images/cabin-sunset.jpg"
+              alt="A cabin in the mountains at sunset next to a grassy field and tall trees"
+            />
           </div>
           <div id="gallery-item-2" class="gallery-item">
-            <img src="images/coffee-in-bed.jpg" alt="" />
+            <img
+              src="images/coffee-in-bed.jpg"
+              alt="A cup of coffee and a book placed on an unmade bed"
+            />
           </div>
           <div id="gallery-item-3" class="gallery-item">
-            <img src="images/cabin-interior.jpg" alt="" />
+            <img
+              src="images/cabin-interior.jpg"
+              alt="A lounge room of a wooden house with sunlight streaming through the window"
+            />
           </div>
           <div id="gallery-item-4" class="gallery-item">
-            <img src="images/woman-drinking-tea.jpg" alt="" />
+            <img
+              src="images/woman-drinking-tea.jpg"
+              alt="A woman drinking tea on her varandah with a blanket around her shoulders"
+            />
           </div>
           <div id="gallery-item-5" class="gallery-item">
-            <img src="images/fireplace.jpg" alt="" />
+            <img
+              src="images/fireplace.jpg"
+              alt="A close up image of a fireplace with burning logs"
+            />
           </div>
           <div id="gallery-item-6" class="gallery-item">
-            <img src="images/man-pats-horse.jpg" alt="" />
+            <img
+              src="images/man-pats-horse.jpg"
+              alt="A hand reaching out to pat a horse with a long white mane"
+            />
           </div>
         </div>
       </section>
@@ -159,82 +233,66 @@
       <section id="bookings">
         <div id="bookings-form-container">
           <h2>Book Now</h2>
-          <form action="" method="post" id="form">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="name"
-              required
-            />
+          <!-- The form's 'action' has been set to a . because this site doesn't have a backend yet and an empty value for an action leads to an error in the html validator -->
+          <form action="." method="post" id="form">
+            <input type="text" name="name" placeholder="name" required />
             <br />
 
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="email"
-              required
-            />
+            <input type="email" name="email" placeholder="email" required />
             <br />
 
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="phone"
-              required
-            />
+            <input type="tel" name="phone" placeholder="phone" required />
             <br />
 
             <label for="checkin">Check-in Date:</label>
             <br />
-            <input type="date" id="checkin" name="checkin" required />
+            <input type="date" name="check-in" required />
             <br />
 
             <label for="checkout">Check-out Date:</label>
             <br />
-            <input type="date" id="checkout" name="checkout" required />
+            <input type="date" name="check-out" required />
             <br />
 
-            <label for="adults">Number of Adults:</label>
+            <label for="num-adults">Number of Adults:</label>
             <br />
             <input
               type="number"
-              id="adults"
-              name="adults"
+              id="num-adults"
+              name="num-adults"
               min="1"
               max="10"
               required
             />
             <br />
 
-            <label for="children">Number of Children:</label>
+            <label for="num-children">Number of Children:</label>
             <br />
             <input
               type="number"
-              id="children"
-              name="children"
+              id="num-children"
+              name="num-children"
               min="0"
               max="10"
               required
             />
             <br />
 
-            <label for="room">Room Type:</label>
+            <label for="room-type">Room Type:</label>
             <br />
-            <select id="room" name="room" required>
-              <option value="standard">Standard Room</option>
-              <option value="deluxe">Deluxe Room</option>
-              <option value="suite">Suite</option>
+            <select id="room-type" name="room-type" required>
+              <option value="" selected disabled>- Choose a room type -</option>
+              <option value="standard">Standard</option>
+              <option value="deluxe">Ensuite</option>
+              <option value="suite">Deluxe ensuite</option>
             </select>
             <br />
 
-            <label for="special"
+            <label for="special-requests"
               >Special Requests or Additional Information:</label
             >
             <br />
-            <textarea id="special" name="special"></textarea>
+            <textarea id="special-requests" name="special-requests"></textarea>
             <br />
 
             <input type="submit" value="Book Now" id="book-now-button" />
@@ -247,16 +305,33 @@
 
     <!--FOOTER-->
     <footer id="contact">
+      
       <div class="footer-container">
+        <!-- The footer is a flex container that contains other sub containers -->
+        <!-- This is used to manage the space within the footer and then to be able whether the content inside each of the smaller sections displays vertically or horizontally depending on the screen size -->
         <div class="footer-space-manager">
           <div id="social-media-links-container">
-            <ul
-              role="list"
-              aria-label="social-media-links"
-              id="social-media-links"
-            >
-              <li><a aria-label="facebook" href="#"></a></li>
-              <li><a aria-label="instagram" href="#"></a></li>
+            <ul aria-label="social-media-links" id="social-media-links">
+              <li>
+                <a aria-label="facebook" href="#"></a>
+                  <i class="fa-brands fa-facebook" style="color: #ffffff"></i
+                ></a>
+              </li>
+              <li>
+                <a aria-label="instagram" href="#"
+                  ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
+                ></a>
+              </li>
+              <li>
+                <a aria-label="youtube" href="#"></a>
+                  <i class="fa-brands fa-youtube" style="color: #ffffff"></i
+                ></a>
+              </li>
+              <li>
+                <a aria-label="twitter" href="#"></a>
+                  <i class="fa-brands fa-twitter" style="color: #ffffff"></i
+                ></a>
+              </li>
             </ul>
           </div>
           <div id="footer-nav-container">

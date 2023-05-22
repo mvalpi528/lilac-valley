@@ -170,6 +170,10 @@ nav li a:hover {
   text-align: justify;
 }
 
+.about-us-grid-item li {
+  margin-bottom: 10px;
+}
+
 #about-us-image-1 {
   background-image: url("../images/blue-mountains.jpg");
   background-position: bottom;
@@ -267,7 +271,6 @@ nav li a:hover {
 
 /* ==========SECTION 4 STYLING============= */
 #bookings {
-  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   max-width: 1000px;
@@ -275,14 +278,8 @@ nav li a:hover {
 }
 
 #bookings-form-container {
+  width: 400px;
   margin: 0 auto;
-}
-
-#bookings-image-container {
-  /* https://unsplash.com/photos/GHOiyov2TSQ */
-  background-image: url("../images/horses.jpg");
-  background-size: cover;
-  border: 1px solid blue;
 }
 
 /* using flexbox to make all of the child elements the same width */
