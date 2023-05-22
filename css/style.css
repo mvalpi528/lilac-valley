@@ -1,7 +1,8 @@
+/* REFERENCES AT THE END OF THE CSS FILE */
+
 /* ==========BASIC UNIVERSAL STYLING & CLEAN UP============= */
 
-/* Importing a downloaded font */
-
+/* Including a downloaded font in the project using the 'font-face' rule */
 @font-face {
   font-family: "Bebas";
   /* Jumps back to index via ../ */
@@ -9,7 +10,7 @@
 }
 
 /* some basic css resetting */
-/* Creating CSS Custom Properties */
+/* declaring CSS Custom Properties (increases maintainability) */
 /* Selecting the root element of your page, which in almost all cases is the html element */
 :root {
   --primary-color: #fffefe;
@@ -536,19 +537,47 @@ footer ul {
 
 /* REFERENCES */
 
-/* sheep.jpg -  https://unsplash.com/photos/GHOiyov2TSQ */
-/* cows.jpg - https://unsplash.com/photos/UdhpcfImQ9Y */
-/* horses.jpg - https://unsplash.com/photos/38_XHFO6ycI */
-/* horse.jpg - https://unsplash.com/photos/Olt577JtPM0 */
-/* chicken.jpg - https://unsplash.com/photos/yEW23jxVsNI */
-/* piglets.jpg - https://unsplash.com/photos/6y7jACxmhP8 */
-/* goat.jpg - https://unsplash.com/photos/bhD6TGRjnWc */
-/* blue-mountains.jpg - https://unsplash.com/photos/Y04q5UQrRQM */
-/* child-feeding-chickens.jpg - https://unsplash.com/photos/SO8FjbZRSW0 */
-/* cabin-sunset.jpg - https://unsplash.com/photos/BSQq5dRT_KU */
-/* coffee-in-bed.jpg - https://unsplash.com/photos/HvX8bOBvyR8 */
-/* cabin-interior.jpg - https://unsplash.com/photos/uX8wVtW5PQo */
-/* woman-drinking-tea.jpg - https://unsplash.com/photos/DeRbzZO4bUY */
-/* fireplace.jpg - https://unsplash.com/photos/xvYNf3a6LmM */
-/* man-pats-horse - https://unsplash.com/photos/0J_dP7tm0Iw */
-/* hero3.jpg - https://www.pexels.com/photo/landscape-photography-of-green-grass-field-1227596/*/
+/* Agnelli, Maxime. 2019. selective focus photography of brown goat during daytime. Photograph. Unsplash. February 17, 2019. https://unsplash.com/photos/bhD6TGRjnWc */
+/* goat.jpg */
+
+/* Becker, David. 2023. a person petting a small horse on the nose. Photograph. Unsplash. April 27, 2023. https://unsplash.com/photos/0J_dP7tm0Iw */
+/* man-pats-horse.jpg */
+
+/* Carter, Sam. 2017. white sheep on green grass during daytime. Photograph. Unsplash. January 16, 2017. https://unsplash.com/photos/GHOiyov2TSQ */
+/* sheep.jpg */
+
+/* Headway.io. 2018. time-lapse photography of burning wood. Photograph. Unsplash. April 11, 2018. https://unsplash.com/photos/xvYNf3a6LmM */
+/* fireplace.jpg */
+
+/* Isaacson, Hans. 2021. a living room with a stove and a large window. Photograph. Unsplash. September 16, 2021. https://unsplash.com/photos/uX8wVtW5PQo */
+/* cabin-interior.jpg */
+
+/* Kovac, Lili. 2018. black and brown house near trees. Photograph. Unsplash. November 21, 2018. https://unsplash.com/photos/BSQq5dRT_KU */
+/* cabin-sunset.jpg */
+
+/* Lee, Joeyy. 2021. green and brown mountains under white clouds during daytime. Photograph. Unsplash. March 22, 2021. https://unsplash.com/photos/Y04q5UQrRQM */
+/* blue-mountains.jpg */
+
+/* McFeron, Alexander. 2018. woman covering with blanket while holding cup. Photograph. Unsplash. December 2, 2018. https://unsplash.com/photos/DeRbzZO4bUY */
+/* woman-drinking-tea.jpg */
+
+/* Ohlman, Laura. 2022. a boy holding a bucket of water. Photograph. Unsplash. August 10, 2022. https://unsplash.com/photos/SO8FjbZRSW0 */
+/* child-feeding-chickens.jpg */
+
+/* Peter, Luisa. 2020. brown horse with silver round pendant necklace. Photograph. Unsplash. June 26, 2020.  https://unsplash.com/photos/Olt577JtPM0 */
+/* horse.jpg */
+
+/* Pidvalnyi, Oleksandr. 2018. Landscape Photography of Green Grass Field. Photograph. Pexels. July 9, 2018. https://www.pexels.com/photo/landscape-photography-of-green-grass-field-1227596/*/
+/* hero3.jpg */
+
+/* Schipper Vera, Kenneth. 2020. a couple of pigs that are laying down. Photograph. Unsplash. February 3, 2020. https://unsplash.com/photos/6y7jACxmhP8 */
+/* piglets.jpg */
+
+/* Te Strake, Stijn. 2017. a herd of cows standing on top of a lush green field. Photograph. Unsplash. July 21, 2017. https://unsplash.com/photos/UdhpcfImQ9Y */
+/* cows.jpg */
+
+/* Vasiljevic, Jovan. 2021. white and gold box on white textile. Photograph. Unsplash. March 3, 2021. https://unsplash.com/photos/HvX8bOBvyR8 */
+/* coffee-in-bed.jpg */
+
+/* Wainscoat, James. 2021. brown chicken on green grass field during daytime. Photograph. Unsplash. February 1, 2021. https://unsplash.com/photos/yEW23jxVsNI */
+/* chicken.jpg */
