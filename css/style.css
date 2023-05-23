@@ -13,48 +13,71 @@
 /* declaring CSS Custom Properties (increases maintainability) */
 /* Selecting the root element of your page, which in almost all cases is the html element */
 :root {
+  /* Setting custom properties for all the colours used in the project */
   --primary-color: #fffefe;
   --secondary-color: #292226;
   --tertiary-color: #4d697b;
 
+  /* Setting custom properties for all the fonts used in the project */
   --hero-font: "Amatic SC";
   --primary-font: "Montserrat", sans-serif;
   --secondary-font: "Bebas";
 }
 
 html {
+  /* makes the website scroll quickly to the target destination rather
+   than jumping suddenly to the target */
   scroll-behavior: smooth;
 }
 
 body {
+  /* Certain browsers may introduce some margin by default, setting the margin
+   to 0 ensures that the layout is displayed consistently across browsers and
+   that no margin is added by default  */
   margin: 0;
-  box-sizing: border-box;
+  /* The font-family of all elements on the page will be the
+   primary primary font unless overridden by a more specific rule */
   font-family: var(--primary-font);
+  /* The background of all elements on the page will be the
+   primary colour unless overridden by a more specific rule */
   background-color: var(--primary-color);
+  /* The colour of all of the elements on the page will be the
+   secondary colour unless overridden by a more specific rule */
   color: var(--secondary-color);
 }
 
+/* Styling all links inside the navigation bar */
 nav a {
+  /* Removing the default styling for links (they are underlined by default) */
   text-decoration: none;
   color: var(--secondary-color);
   font-family: var(--secondary-font);
 }
 
 section {
+  /* Each section on the page stretches or shrinks to fit the content */
   height: auto;
-  padding: 10px;
-  /* border: pink 5px dashed; */
+  /* setting the max width for all sections on the site except for the hero
+  so the content doesnt get too stretched on larger screens */
+  max-width: 1000px;
+  /* centering all of the sections */
+  margin: 0 auto;
+  /* The top padding was set to ensure that the heading is not by the nav bar
+  when the user clicks one of the nav links */
+  padding: 50px 50px 0 50px;
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--secondary-font);
-}
+/* Setting styling for all of the headings (overriding the styling set in
+the body rule */
 
 h1 {
   font-family: var(--hero-font);
   color: var(--primary-color);
+}
+
+h2,
+h3 {
+  font-family: var(--secondary-font);
 }
 
 h2 {
@@ -68,23 +91,39 @@ h3 {
 }
 /* ==========HEADER============= */
 
+/* The header is used as the container for both the logo and the nav bar */
+/* The height of this header is setting the height of both the logo image and
+the nav bar */
 header {
+  /* sets the height of the container which in turn sets the height of 
+  the image and the nav bar */
   height: 70px;
+  /* flex is used to manage space between elements */
   display: flex;
+  /* centering the items on the cross-axis (vertical) */
   align-items: center;
+  /* controlling placement on the main-axis (horizontal)  */
   justify-content: space-between;
+  /* moves the logo and the nav bar 20px away from the sides */
   padding: 0px 20px;
+  /* makes the nav bar stick to the top of the screen as it scrolls */
   position: sticky;
+  /* keeps the nav bar 0px from the top of the screen */
   top: 0;
+  /* keeps the nav bar 0px from the left of the screen */
   left: 0;
   /* remember that a value for the position property must 
   be specified for a z-index to work */
+  /* this z-index value makes it display 'on top' of other content with
+  lower z-indexes */
   z-index: 10;
-  background-color: #ffffff;
-  border-bottom: 1px solid grey;
+  background-color: var(--primary-color);
+  /* Creating a drop shadow effect to distinguish the nav bar from other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header a {
+  /* makes the logo image take up 100% of the height of the parent container */
   height: 100%;
 }
 
@@ -125,8 +164,9 @@ nav li a:hover {
 /* ==========SECTION 1 STYLING============= */
 
 #hero {
-  /* Sets the height of the section to the entire height of the viewport */
-  height: 100vh;
+  /* Sets the height of the section to just under the height of the viewport because
+  some of the viewport is taken up by the nav bar */
+  height: 90vh;
   /* An element with position: absolute must have a parent element set
    to position: relative to contain it, otherwise it will be positioned in relation
    to the html element. This is the parent container for the hero text */
@@ -155,9 +195,6 @@ nav li a:hover {
 }
 
 #about-us-grid-container {
-  margin: 0 auto;
-  margin-bottom: 100px;
-  max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 400px 400px;
@@ -172,7 +209,7 @@ nav li a:hover {
 }
 
 .about-us-grid-item li {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 #about-us-image-1 {
@@ -279,7 +316,7 @@ nav li a:hover {
 }
 
 #bookings-form-container {
-  width: 400px;
+  width: 200px;
   margin: 0 auto;
 }
 
@@ -545,6 +582,8 @@ footer ul {
 
 /* Carter, Sam. 2017. white sheep on green grass during daytime. Photograph. Unsplash. January 16, 2017. https://unsplash.com/photos/GHOiyov2TSQ */
 /* sheep.jpg */
+
+/* Font awesome, 2023. font awesome icons, Icons. Font Awesome. n.d. https://fontawesome.com/icons */
 
 /* Headway.io. 2018. time-lapse photography of burning wood. Photograph. Unsplash. April 11, 2018. https://unsplash.com/photos/xvYNf3a6LmM */
 /* fireplace.jpg */

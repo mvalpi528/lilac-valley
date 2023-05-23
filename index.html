@@ -79,9 +79,11 @@
     <!-- The main content of the site is all located within the 'main' element -->
     <main>
       <!-- The background image for this section is set in the CSS -->
-      <section id="hero">
+      <!-- A div has been used to contain the hero section so that I can add
+         universal styling to sections without affecting the hero section -->
+      <div id="hero">
         <h1 class="hero-text">Lilac Valley Farm Stay</h1>
-      </section>
+      </div>
 
       <!-- About Us section -->
       <section id="about-us">
@@ -154,6 +156,7 @@
               <h3>Kelly the cow</h3>
             </div>
             <div class="meet-the-animals-grid-item">
+              <!-- (Peter, Luisa. 2020) -->
               <img
                 src="images/horse.jpg"
                 alt="A horse looking into the camera in front of a black background"
@@ -162,6 +165,7 @@
               <h3>Harry the horse</h3>
             </div>
             <div class="meet-the-animals-grid-item">
+              <!-- (Wainscoat, James. 2021) -->
               <img
                 src="images/chicken.jpg"
                 alt="A single rooster walking across a patch of grass"
@@ -170,6 +174,7 @@
               <h3>Rodney the Rooster</h3>
             </div>
             <div class="meet-the-animals-grid-item">
+              <!-- (Schipper Vera, Kenneth. 2020) -->
               <img
                 src="images/piglets.jpg"
                 alt="Two piglets leading against a fence post looking over"
@@ -178,6 +183,7 @@
               <h3>Poppy and Paula the piglets</h3>
             </div>
             <div class="meet-the-animals-grid-item">
+              <!-- (Agnelli, Maxime. 2019) -->
               <img
                 src="images/goat.jpg"
                 alt="A goat looks at the camera with out of focus grass in the background"
@@ -210,24 +216,28 @@
             />
           </div>
           <div id="gallery-item-3" class="gallery-item">
+            <!-- (Isaacson, Hans. 2021) -->
             <img
               src="images/cabin-interior.jpg"
               alt="A lounge room of a wooden house with sunlight streaming through the window"
             />
           </div>
           <div id="gallery-item-4" class="gallery-item">
+            <!-- (McFeron, Alexander. 2018) -->
             <img
               src="images/woman-drinking-tea.jpg"
               alt="A woman drinking tea on her varandah with a blanket around her shoulders"
             />
           </div>
           <div id="gallery-item-5" class="gallery-item">
+            <!-- (Headway.io. 2018) -->
             <img
               src="images/fireplace.jpg"
               alt="A close up image of a fireplace with burning logs"
             />
           </div>
           <div id="gallery-item-6" class="gallery-item">
+            <!-- (Becker, David. 2023) -->
             <img
               src="images/man-pats-horse.jpg"
               alt="A hand reaching out to pat a horse with a long white mane"
@@ -311,7 +321,6 @@
 
     <!--FOOTER-->
     <footer id="contact">
-      
       <div class="footer-container">
         <!-- The footer is a flex container that contains other sub containers -->
         <!-- This is used to manage the space within the footer and then to be able whether the content inside each of the smaller sections displays vertically or horizontally depending on the screen size -->
@@ -319,22 +328,26 @@
           <div id="social-media-links-container">
             <ul aria-label="social-media-links" id="social-media-links">
               <li>
-                <a aria-label="facebook" href="#"></a>
-                  <i class="fa-brands fa-facebook" style="color: #ffffff"></i
+                <a aria-label="facebook" href="#">
+                  <!-- (Font awesome, 2023) -->
+                  <i class="fa-brands fa-facebook" style="color: #ffffff"></i>
+                </a>
+              </li>
+              <li>
+                <a aria-label="instagram" href="#">
+                  <!-- (Font awesome, 2023) -->
+                  <i class="fa-brands fa-instagram" style="color: #ffffff"></i
                 ></a>
               </li>
               <li>
-                <a aria-label="instagram" href="#"
-                  ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
-                ></a>
-              </li>
-              <li>
-                <a aria-label="youtube" href="#"></a>
+                <a aria-label="youtube" href="#">
+                  <!-- (Font awesome, 2023) -->
                   <i class="fa-brands fa-youtube" style="color: #ffffff"></i
                 ></a>
               </li>
               <li>
-                <a aria-label="twitter" href="#"></a>
+                <a aria-label="twitter" href="#">
+                  <!-- (Font awesome, 2023) -->
                   <i class="fa-brands fa-twitter" style="color: #ffffff"></i
                 ></a>
               </li>
