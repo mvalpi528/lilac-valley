@@ -87,12 +87,12 @@
 
       <!-- About Us section -->
       <section id="about-us">
-        <h2>about us</h2>
+        <h2 id="about-us-heading">about us</h2>
         <!-- The 'about us' content is split into four grid items contained within this div  -->
         <!-- Each element has been assigned the same class name so that they can be styled as a group -->
         <div id="about-us-grid-container">
-          <div class="about-us-grid-item">
-            <h3>Who we are?</h3>
+          <div class="about-us-grid-item" id="who-we-are-text">
+            <h3 id="who-we-are-heading">Who we are?</h3>
             <p>
               Located just over an hour away from Sydney, Lilac Valley Farm Stay
               is a simple, rustic farm stay accommodation in the hills of the
@@ -113,7 +113,7 @@
           <!-- Images are added to these grid items in CSS -->
           <div class="about-us-grid-item" id="about-us-image-1"></div>
           <div class="about-us-grid-item" id="about-us-image-2"></div>
-          <div class="about-us-grid-item">
+          <div class="about-us-grid-item" id="lilac-valley-experience-text">
             <h3>The Lilac Valley experience</h3>
             <p>
               Relax and unwind with the family while you take in the fresh air
@@ -135,7 +135,7 @@
         <!-- A sub-section of the 'about us' section -->
         <!-- A grid container that holds cards for animals with matching names -->
         <div id="meet-the-animals">
-          <h2>Meet the Animals</h2>
+          <h2 id="meet-the-animals-title">Meet the Animals</h2>
           <div id="meet-the-animals-grid-container">
             <div class="meet-the-animals-grid-item">
               <!-- (Carter, Sam 2017) -->
@@ -197,7 +197,7 @@
 
       <!--SECTION 3-->
       <section id="gallery">
-        <h2>gallery</h2>
+        <h2 id="gallery-heading">gallery</h2>
         <!-- A grid to contain gallery images -->
         <!-- Each gallery item has a unique id allowing them to have unique sizes -->
         <div id="gallery-grid-container">
@@ -325,7 +325,16 @@
         <!-- The footer is a flex container that contains other sub containers -->
         <!-- This is used to manage the space within the footer and then to be able whether the content inside each of the smaller sections displays vertically or horizontally depending on the screen size -->
         <div class="footer-space-manager">
-          <div id="social-media-links-container">
+          <div class="footer-item" id="contact-info-container">
+            <address>
+              <p>Lilac Valley Farm Stay</p>
+              <p>372 Example Road</p>
+              <p>Blackheath, NSW 2785</p>
+              <p>Phone: 1111-1111</p>
+              <p>Email: lilacvalley@example.com</p>
+            </address>
+          </div>
+          <div class="footer-item" id="social-media-links-container">
             <ul aria-label="social-media-links" id="social-media-links">
               <li>
                 <a aria-label="facebook" href="#">
@@ -352,21 +361,6 @@
                 ></a>
               </li>
             </ul>
-          </div>
-          <div id="footer-nav-container">
-            <a href="#">Home</a>
-            <a href="#">Pricing</a>
-            <a href="#">About Us</a>
-            <a href="#">Sustainability</a>
-          </div>
-          <div id="contact-info-container">
-            <address>
-              <p>Lilac Valley Farm Stay</p>
-              <p>372 Govetts Leap Road</p>
-              <p>Anytown, USA 12345</p>
-              <p>Phone: (555) 555-5555</p>
-              <p>Email: john.doe@example.com</p>
-            </address>
           </div>
         </div>
       </div>

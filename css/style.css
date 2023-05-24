@@ -44,6 +44,7 @@ body {
   /* The colour of all of the elements on the page will be the
    secondary colour unless overridden by a more specific rule */
   color: var(--secondary-color);
+  line-height: 1.6;
 }
 
 /* Styling all links inside the navigation bar */
@@ -136,14 +137,18 @@ header a {
 
 /* ==========NAVIGATION============= */
 
+/* The nav bar takes up 50% of the width of the header unless that is less
+than 600px, beyond this point it will remain 600px */
 nav {
-  width: 50%;
-  min-width: 600px;
+  width: 60%;
 }
 
+/* makes the ul that contains the nav links into a flex container */
 nav ul {
   display: flex;
+  /* creates space around the nav items */
   justify-content: space-around;
+  /* Removes the bullet points from list items */
   list-style-type: none;
 }
 
@@ -151,9 +156,12 @@ nav ul {
 nav li a {
   font-size: 26px;
   font-weight: 400;
+  /* Setting the time it takes for the text to transition between the
+   secondary and the tertiary colour */
   transition: 1s ease;
 }
 
+/* Changes the style when the user hovers over a navigation item */
 nav li a:hover {
   color: var(--tertiary-color);
   text-decoration: underline;
@@ -165,18 +173,23 @@ nav li a:hover {
 
 #hero {
   /* Sets the height of the section to just under the height of the viewport because
-  some of the viewport is taken up by the nav bar */
+  the rest of the viewport is taken up by the nav bar */
+  /* The combination of the nav bar and the hero image takes up the entire viewport */
   height: 90vh;
-  /* An element with position: absolute must have a parent element set
-   to position: relative to contain it, otherwise it will be positioned in relation
-   to the html element. This is the parent container for the hero text */
+  /* An element with 'position: absolute' must have a parent element set
+   to 'position: relative' to contain it, otherwise it will be positioned in relation
+   to the html element. */
+  /* This is the 'position: relative' parent container for the hero text which is
+   'position: absolute' */
   position: relative;
-  /* Make sure to get this image below 1MB - other images should be around 200kb */
+  /* Setting the hero image */
   background-image: url("../images/hero3.jpg");
+  /* Setting the positioning of the hero image */
   background-position: center;
   background-size: cover;
 }
 
+/* Setting the position of the hero text */
 .hero-text {
   /* Parent of this element must be position relative */
   /* Position absolute takes it out of the normal content flow */
@@ -189,29 +202,21 @@ nav li a:hover {
 
 /* ==========SECTION 2 STYLING============= */
 
-#about-us h3 {
-  padding: 0;
-  margin: 0;
-}
-
+/* A container that manages the placement of and space between grid items */
 #about-us-grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 400px 400px;
   gap: 50px;
-  /* border: darkblue dashed 3px; */
 }
 
+/* text styling for 'about us' text */
 .about-us-grid-item {
-  /* border: black 1px solid; */
   font-family: "Montserrat", sans-serif;
   text-align: justify;
 }
 
-.about-us-grid-item li {
-  padding-bottom: 10px;
-}
-
+/* accessing the image for this grid item */
 #about-us-image-1 {
   background-image: url("../images/blue-mountains.jpg");
   background-position: bottom;
@@ -219,6 +224,7 @@ nav li a:hover {
   border-radius: 3px;
 }
 
+/* accessing the image for this grid item */
 #about-us-image-2 {
   background-image: url("../images/child-feeding-chickens.jpg");
   background-position: center;
@@ -242,13 +248,13 @@ nav li a:hover {
 }
 
 .meet-the-animals-grid-item {
-  /* border: 1px black solid; */
   height: 100%;
   width: 100%;
 }
 
 .animal-bio-pic {
-  /* Covers the entire are whilst maintaining the aspect ratio */
+  /* object-fit: cover means that the image
+  covers the entire area whilst maintaining the aspect ratio */
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -308,15 +314,17 @@ nav li a:hover {
 }
 
 /* ==========SECTION 4 STYLING============= */
+
 #bookings {
   display: grid;
   grid-template-columns: 1fr;
   max-width: 1000px;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 #bookings-form-container {
-  width: 200px;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -385,8 +393,10 @@ footer ul {
 
 .footer-space-manager {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-around;
+  padding-left: 20px;
 }
 
 .footer-container a {
@@ -394,32 +404,38 @@ footer ul {
   text-decoration: none;
 }
 
-/* ==========RESPONSIVE DESIGN============= */
-
-/* ===== DESKTOP HD: Media queries for most HD desktops ===== */
-@media only screen and (max-width: 1920px) {
+#social-media-links-container {
+  width: 150px;
+  display: flex;
+  justify-content: center;
 }
 
-/* ===== SMALL DESKTOP: Media queries for laptop/small desktop ===== */
+#social-media-links-container ul {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+/* ==========RESPONSIVE DESIGN============= */
+
+/* ===== SMALL DESKTOP: Media queries for laptop/small desktop =====
 @media only screen and (max-width: 1366px) {
 }
 
 /* ===== TABLET: Media queries for verticle and horizontal ===== */
 @media only screen and (max-width: 1024px) {
-}
+  /* ==========Global styling============= */
 
-@media only screen and (max-width: 768px) {
-}
+  section {
+    padding: 0;
+  }
 
-/* ===== MOBILE: Media queries for small mobile resolution. ===== */
-@media only screen and (max-width: 640px) {
   /* ==========NAVIGATION============= */
 
   nav {
-    width: 80%;
-    min-width: 200px;
-
-    /* min-width: 600px; */
+    width: 75%;
   }
 
   /* Styling the nav bar text */
@@ -429,78 +445,252 @@ footer ul {
 
   /* ==========SECTION 1 STYLING============= */
 
+  /* * {
+    border: 1px pink dashed;
+  } */
+
   .hero-text {
     top: 60%;
     left: 10%;
-    font-size: 13vw;
+    font-size: 5rem;
   }
 
   /* ==========SECTION 2 STYLING============= */
 
+  /* About us styling */
+
+  #about-us-heading {
+    margin-bottom: 0;
+  }
+
   #about-us-grid-container {
-    grid-template-columns: repeat(1, 1fr);
-    place-items: center;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    width: 100%;
   }
 
   .about-us-grid-item {
-    width: 90%;
+    margin: 0 auto;
+    width: 87%;
     height: 50vh;
   }
 
-  #meet-the-animals-grid-container {
-    display: grid;
-    /* min-max stops the elements from the images from resizing to a tiny width */
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    grid-template-rows: repeat(2, minmax(100px, 1fr));
-    place-items: center;
-    gap: 40px;
-    padding: 20px;
+  #who-we-are-text,
+  #lilac-valley-experience-text {
+    height: auto;
   }
 
-  .animal-bio-pic {
-    max-height: 25vh;
+  #about-us li {
+    list-style-type: square;
+  }
+
+  /* Meet the animals styling */
+
+  #meet-the-animals-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, 200px);
+    place-items: center;
+    gap: 100px;
+    margin: 0 30px;
+    margin-bottom: 100px;
   }
 
   /* ==========SECTION 3 STYLING============= */
+
+  #gallery-heading {
+    margin-top: 0;
+  }
 
   #gallery-grid-container {
     height: auto;
     display: grid;
     margin: 0 auto;
+    padding: 0 20px;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    border: 1px solid pink;
   }
 
-  #gallery-item-4 {
+  #gallery-item-6 {
     grid-column: span 1;
-    grid-row: span 5;
+    grid-row: span 2;
   }
+  /* ==========SECTION 4 STYLING============= */
+
+  #bookings {
+    margin-bottom: 50px;
+  }
+
+  #bookings-form-container {
+    width: 55%;
+    margin: 0 auto;
+  }
+
   /* ==========FOOTER STYLIING============= */
 
   .footer-space-manager {
     flex-direction: column;
     align-items: flex-start;
-    border: pink 1px solid;
-    padding: 0 20px;
+    justify-content: space-around;
+    padding-left: 20px;
   }
 
-  #footer-nav-container {
+  #social-media-links-container {
+    width: 200px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+  }
+
+  #social-media-links-container ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 768px) {
+  /* ==========Global styling============= */
+
+  section {
+    padding: 0;
+  }
+
   /* ==========NAVIGATION============= */
 
   nav {
-    width: 50%;
-    min-width: 50px;
-    border: #292226 dashed 1px;
+    width: 75%;
+  }
 
-    /* min-width: 600px; */
+  /* Styling the nav bar text */
+  nav li a {
+    font-size: 3.5vw;
+  }
+
+  /* ==========SECTION 1 STYLING============= */
+
+  /* * {
+    border: 1px pink dashed;
+  } */
+
+  .hero-text {
+    top: 60%;
+    left: 10%;
+    font-size: 5rem;
+  }
+
+  /* ==========SECTION 2 STYLING============= */
+
+  /* About us styling */
+
+  #about-us-heading {
+    margin-bottom: 0;
+  }
+
+  #about-us-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+
+  .about-us-grid-item {
+    margin: 0 auto;
+    width: 87%;
+    height: 50vh;
+  }
+
+  #who-we-are-text,
+  #lilac-valley-experience-text {
+    height: auto;
+  }
+
+  #about-us li {
+    list-style-type: square;
+  }
+
+  /* Meet the animals styling */
+
+  #meet-the-animals-title {
+    margin-bottom: 5px;
+  }
+
+  #meet-the-animals-grid-container {
+    display: grid;
+    /* min-max stops the elements from the images from resizing to a tiny width */
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    /* grid-template-rows: repeat(2, 200px); */
+    place-items: center;
+    gap: 10px;
+    margin: 0 20px;
+  }
+
+  .animal-bio-pic {
+    max-height: 30vh;
+  }
+
+  /* ==========SECTION 3 STYLING============= */
+
+  #gallery-heading {
+    margin-top: 0;
+  }
+
+  #gallery-grid-container {
+    height: auto;
+    display: grid;
+    margin: 0 auto;
+    padding: 0 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* ==========SECTION 4 STYLING============= */
+
+  #bookings {
+    margin-bottom: 50px;
+  }
+
+  #bookings-form-container {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  /* ==========FOOTER STYLIING============= */
+
+  .footer-space-manager {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  #social-media-links-container {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #social-media-links-container ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+  }
+}
+
+/* ===== MOBILE: Media queries for small mobile resolution. ===== */
+@media only screen and (max-width: 640px) {
+  /* ==========Global styling============= */
+
+  section {
+    padding: 0;
+  }
+
+  /* ==========NAVIGATION============= */
+
+  nav {
+    width: 95%;
   }
 
   /* Styling the nav bar text */
@@ -522,38 +712,84 @@ footer ul {
 
   /* ==========SECTION 2 STYLING============= */
 
+  /* About us styling */
+
+  #about-us-heading {
+    margin-bottom: 0;
+  }
+
   #about-us-grid-container {
-    grid-template-columns: repeat(1, 1fr);
-    place-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    width: 100%;
   }
 
   .about-us-grid-item {
-    width: 90%;
+    margin: 0 auto;
+    width: 87%;
     height: 50vh;
   }
 
-  #meet-the-animals-grid-container {
-    display: grid;
-    /* min-max stops the elements from the images from resizing to a tiny width */
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
-    grid-template-rows: repeat(2, 200px);
-    place-items: center;
-    gap: 100px;
+  #who-we-are-text,
+  #lilac-valley-experience-text {
+    height: auto;
+  }
+
+  #about-us li {
+    list-style-type: square;
+  }
+
+  /* Meet the animals styling */
+
+  #meet-the-animals-title {
     margin-bottom: 50px;
   }
 
+  #meet-the-animals-grid-container {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    grid-template-rows: repeat(1, 200px);
+    place-items: center;
+    gap: 10px;
+    margin: 10px;
+  }
+
+  .meet-the-animals-grid-item {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
   .animal-bio-pic {
-    max-height: 25vh;
+    max-height: 200px;
   }
 
   /* ==========SECTION 3 STYLING============= */
+
+  #gallery-heading {
+    margin-top: 0;
+  }
 
   #gallery-grid-container {
     height: auto;
     display: grid;
     margin: 0 auto;
+    padding: 0 20px;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
+  }
+
+  /* ==========SECTION 4 STYLING============= */
+
+  #bookings {
+    margin-bottom: 50px;
+  }
+
+  #bookings-form-container {
+    width: 65%;
+    margin: 0 auto;
   }
 
   /* ==========FOOTER STYLIING============= */
@@ -561,14 +797,155 @@ footer ul {
   .footer-space-manager {
     flex-direction: column;
     align-items: flex-start;
-    border: pink 1px solid;
-    padding: 0 20px;
+    justify-content: space-around;
   }
 
-  #footer-nav-container {
+  #social-media-links-container {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #social-media-links-container ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  /* ==========Global styling============= */
+
+  section {
+    padding: 0;
+  }
+
+  /* ==========NAVIGATION============= */
+
+  nav {
+    width: 95%;
+  }
+
+  /* Styling the nav bar text */
+  nav li a {
+    font-size: 3.5vw;
+  }
+
+  /* ==========SECTION 1 STYLING============= */
+
+  /* * {
+    border: 1px pink dashed;
+  } */
+
+  .hero-text {
+    top: 55%;
+    left: 10%;
+    font-size: 5rem;
+  }
+
+  /* ==========SECTION 2 STYLING============= */
+
+  /* About us styling */
+
+  #about-us-heading {
+    margin-bottom: 0;
+  }
+
+  #about-us-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+
+  .about-us-grid-item {
+    margin: 0 auto;
+    width: 87%;
+    height: 50vh;
+  }
+
+  #who-we-are-text,
+  #lilac-valley-experience-text {
+    height: auto;
+  }
+
+  #about-us li {
+    list-style-type: square;
+  }
+
+  /* Meet the animals styling */
+
+  #meet-the-animals-title {
+    margin-bottom: 50px;
+  }
+
+  #meet-the-animals-grid-container {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    grid-template-rows: repeat(1, 200px);
+    place-items: center;
+    gap: 10px;
+    margin: 10px;
+  }
+
+  .meet-the-animals-grid-item {
+    height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+  }
+
+  .animal-bio-pic {
+    max-height: 200px;
+  }
+
+  /* ==========SECTION 3 STYLING============= */
+
+  #gallery-heading {
+    margin-top: 0;
+  }
+
+  #gallery-grid-container {
+    height: auto;
+    display: grid;
+    margin: 0 auto;
+    padding: 0 20px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  /* ==========SECTION 4 STYLING============= */
+
+  #bookings {
+    margin-bottom: 50px;
+  }
+
+  #bookings-form-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* ==========FOOTER STYLIING============= */
+
+  .footer-space-manager {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  #social-media-links-container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #social-media-links-container ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
   }
 }
 
